@@ -5,7 +5,9 @@ Upgrading Your Network Components
           referring to changing the version of a component (for example, going
           from a v1.1 binary to a v1.2 binary). The term “update,” on the other
           hand, refers not to versions but to configuration changes, such as
-          updating a channel configuration or a deployment script.
+          updating a channel configuration or a deployment script. As there is
+          no data migration, technically speaking, in Fabric, we will not use
+          the term “migration” or “migrate” here.
 
 Overview
 --------
@@ -34,7 +36,7 @@ BYFN will not cover them:
 * **CouchDB**
 * **SDK**
 
-The process for upgrading these components --- if necesary --- will be covered in
+The process for upgrading these components --- if necessary --- will be covered in
 a section following the tutorial.
 
 At a high level, our upgrade tutorial will perform the following steps:

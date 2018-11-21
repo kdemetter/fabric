@@ -222,7 +222,7 @@ For example, in the following snippet of the ``initMarble`` function,
 To summarize, the policy definition above for our ``collection.json``
 allows all peers in Org1 and Org2 can store and transact (endorse, commit,
 query) with the marbles private data ``name, color, size, owner`` in their
-private database. But only peers in Org1 can can store and transact with
+private database. But only peers in Org1 can store and transact with
 the ``price`` private data in an additional private database.
 
 As an additional data privacy benefit, since a collection is being used,
@@ -401,7 +401,7 @@ submit a request to add a marble:
     export CORE_PEER_LOCALMSPID=Org1MSP
     export CORE_PEER_TLS_ROOTCERT_FILE=/opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/tls/ca.crt
     export CORE_PEER_MSPCONFIGPATH=/opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp
-    export PEER0_ORG1_CA=/opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/peerOrganizations/org2.example.com/peers/peer0.org1.example.com/tls/ca.crt
+    export PEER0_ORG1_CA=/opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/tls/ca.crt
 
  Invoke the marbles ``initMarble`` function which
  creates a marble with private data ---  name ``marble1`` owned by ``tom`` with a color
@@ -627,7 +627,7 @@ price private data is purged.
     export CORE_PEER_LOCALMSPID=Org1MSP
     export CORE_PEER_TLS_ROOTCERT_FILE=/opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/tls/ca.crt
     export CORE_PEER_MSPCONFIGPATH=/opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp
-    export PEER0_ORG1_CA=/opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/peerOrganizations/org2.example.com/peers/peer0.org1.example.com/tls/ca.crt
+    export PEER0_ORG1_CA=/opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/tls/ca.crt
 
  Open a new terminal window and view the private data logs for this peer by
  running the following command:
